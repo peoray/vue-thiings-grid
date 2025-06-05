@@ -6,25 +6,31 @@
 
 <script lang="ts">
 import { computed } from 'vue'
+
 // component imports
 import ThiingsIconsExample from '../examples/ThiingsIcons.vue'
 import SimpleNumbersExample from '../examples/SimpleNumbers.vue'
 import EmojiFunExample from '../examples/EmojiFun.vue'
+import ColorfulGridExample from '../examples/ColorfulGrid.vue'
+
 // source code imports
 import thiingsIconsSource from '../examples/ThiingsIcons.vue?raw'
 import simpleNumbersSource from '../examples/SimpleNumbers.vue?raw'
 import emojiFunSource from '../examples/EmojiFun.vue?raw'
+import colorfulGridSource from '../examples/ColorfulGrid.vue?raw'
 
 export const exampleComponents = [
   ThiingsIconsExample,
   SimpleNumbersExample,
   EmojiFunExample,
+  ColorfulGridExample,
 ]
 
 export const sourceCodes = [
   thiingsIconsSource,
   simpleNumbersSource,
   emojiFunSource,
+  colorfulGridSource,
 ]
 
 export const componentNames = computed(() =>
