@@ -6,12 +6,16 @@
 
 <script lang="ts">
 import { computed } from 'vue'
+// component imports
+import ThiingsIconsExample from '../examples/ThiingsIcons.vue'
 import SimpleNumbersExample from '../examples/SimpleNumbers.vue'
+// source code imports
+import thiingsIconsSource from '../examples/ThiingsIcons.vue?raw'
 import simpleNumbersSource from '../examples/SimpleNumbers.vue?raw'
 
-export const exampleComponents = [SimpleNumbersExample]
+export const exampleComponents = [ThiingsIconsExample, SimpleNumbersExample]
 
-export const sourceCodes = [simpleNumbersSource]
+export const sourceCodes = [thiingsIconsSource, simpleNumbersSource]
 
 export const componentNames = computed(() =>
   sourceCodes.map((code) => {
