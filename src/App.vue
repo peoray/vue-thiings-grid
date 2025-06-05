@@ -1,40 +1,32 @@
+<template>
+  <div class="flex h-screen w-screen font-sans">
+    <Sidebar
+      :current-example="currentExample"
+      :on-example-change="setCurrentExample"
+    />
+    <main class="flex flex-1 flex-col h-screen">
+      <div class="flex-[3] relative bg-white border-b border-gray-200">
+        <Playground :current-example="currentExample" />
+      </div>
+      <div class="flex flex-1 min-h-[300px]">
+        <SourceCode :current-example="currentExample" />
+      </div>
+    </main>
+    <Toaster position="top-right" rich-colors />
+  </div>
+</template>
+
 <script setup lang="ts">
+import { ref } from 'vue'
+import 'vue-sonner/style.css'
+import { Toaster } from 'vue-sonner'
 import Sidebar from './components/Sidebar.vue'
 import Playground from './components/Playground.vue'
 import SourceCode from './components/SourceCode.vue'
 
-import ThiingsGrid, { type ItemConfig } from '../lib/ThiingsGrid.vue'
+const currentExample = ref(0)
+
+const setCurrentExample = (index: number) => {
+  currentExample.value = index
+}
 </script>
-
-<template>
-  <div>
-    <h1 class="text-4xl">Hello world</h1>
-
-    <Sidebar />
-    <Playground />
-    <SourceCode />
-
-    <!-- <ThiingsGrid
-      :grid-size="100"
-      class="my-grid"
-      :initial-position="{ x: 0, y: 0 }"
-    >
-      <template #default="{ itemConfig }">
-        <div class="grid-item">
-          {{ itemConfig.gridIndex }}
-        </div>
-      </template>
-    </ThiingsGrid> -->
-
-    <div :style="{ width: '100vw', height: '100vh' }">
-      <ThiingsGrid :grid-size="80">
-        <template #default="{ itemConfig }">
-          <!-- Inline cell rendering -->
-          <div class="absolute inset-1 flex items-center justify-center">
-            {{ itemConfig.gridIndex }}
-          </div>
-        </template>
-      </ThiingsGrid>
-    </div>
-  </div>
-</template>
