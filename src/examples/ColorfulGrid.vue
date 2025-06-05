@@ -1,5 +1,5 @@
 <template>
-  <ThiingsGrid :grid-size="100" :initialPosition="{ x: 0, y: 0 }">
+  <ThiingsGrid :grid-size="100">
     <template #default="{ gridIndex }">
       <div
         :class="`absolute inset-0 flex items-center justify-center ${getColorClass(

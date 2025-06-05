@@ -1,5 +1,5 @@
 <template>
-  <ThiingsGrid :grid-size="160" :initial-position="{ x: 0, y: 0 }">
+  <ThiingsGrid :grid-size="160">
     <template #default="{ gridIndex }">
       <div class="absolute inset-1 flex items-center justify-center">
         <img

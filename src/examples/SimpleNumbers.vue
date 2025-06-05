@@ -1,9 +1,5 @@
 <template>
-  <ThiingsGrid
-    :gridSize="80"
-    :initialPosition="{ x: 0, y: 0 }"
-    class="bg-gray-100"
-  >
+  <ThiingsGrid :gridSize="80" class="bg-gray-100">
     <template #default="{ gridIndex }">
       <div
         class="absolute inset-1 flex items-center justify-center bg-blue-50 border border-blue-500 rounded text-sm font-bold text-blue-800"

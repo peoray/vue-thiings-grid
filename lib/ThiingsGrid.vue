@@ -73,12 +73,16 @@ interface ItemConfig {
   gridIndex: number
 }
 
-// Define props with TypeScript
-const props = defineProps<{
-  gridSize: number
-  className?: string
-  initialPosition?: Position
-}>()
+const props = withDefaults(
+  defineProps<{
+    gridSize: number
+    className?: string
+    initialPosition?: Position
+  }>(),
+  {
+    initialPosition: () => ({ x: 0, y: 0 }),
+  }
+)
 
 // Define reactive state
 const offset = ref<Position>({ ...props.initialPosition } || { x: 0, y: 0 })

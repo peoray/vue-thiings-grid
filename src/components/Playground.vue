@@ -12,18 +12,21 @@ import ThiingsIconsExample from '../examples/ThiingsIcons.vue'
 import SimpleNumbersExample from '../examples/SimpleNumbers.vue'
 import EmojiFunExample from '../examples/EmojiFun.vue'
 import ColorfulGridExample from '../examples/ColorfulGrid.vue'
+import CardLayoutExample from '../examples/CardLayout.vue'
 
 // source code imports
 import thiingsIconsSource from '../examples/ThiingsIcons.vue?raw'
 import simpleNumbersSource from '../examples/SimpleNumbers.vue?raw'
 import emojiFunSource from '../examples/EmojiFun.vue?raw'
 import colorfulGridSource from '../examples/ColorfulGrid.vue?raw'
+import cardLayoutSource from '../examples/CardLayout.vue?raw'
 
 export const exampleComponents = [
   ThiingsIconsExample,
   SimpleNumbersExample,
   EmojiFunExample,
   ColorfulGridExample,
+  CardLayoutExample,
 ]
 
 export const sourceCodes = [
@@ -31,6 +34,7 @@ export const sourceCodes = [
   simpleNumbersSource,
   emojiFunSource,
   colorfulGridSource,
+  cardLayoutSource,
 ]
 
 export const componentNames = computed(() =>
