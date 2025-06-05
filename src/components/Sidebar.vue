@@ -41,7 +41,7 @@
         explore thiings.co
       </a>
       <a
-        href="https://github.com/charlieclark/thiings-grid"
+        href="https://github.com/peoray/vue-thiings-grid"
         target="_blank"
         rel="noopener noreferrer"
         class="block w-full bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-lg text-center text-sm transition-colors duration-200 no-underline"
