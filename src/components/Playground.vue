@@ -9,13 +9,23 @@ import { computed } from 'vue'
 // component imports
 import ThiingsIconsExample from '../examples/ThiingsIcons.vue'
 import SimpleNumbersExample from '../examples/SimpleNumbers.vue'
+import EmojiFunExample from '../examples/EmojiFun.vue'
 // source code imports
 import thiingsIconsSource from '../examples/ThiingsIcons.vue?raw'
 import simpleNumbersSource from '../examples/SimpleNumbers.vue?raw'
+import emojiFunSource from '../examples/EmojiFun.vue?raw'
 
-export const exampleComponents = [ThiingsIconsExample, SimpleNumbersExample]
+export const exampleComponents = [
+  ThiingsIconsExample,
+  SimpleNumbersExample,
+  EmojiFunExample,
+]
 
-export const sourceCodes = [thiingsIconsSource, simpleNumbersSource]
+export const sourceCodes = [
+  thiingsIconsSource,
+  simpleNumbersSource,
+  emojiFunSource,
+]
 
 export const componentNames = computed(() =>
   sourceCodes.map((code) => {
