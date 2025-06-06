@@ -9,10 +9,8 @@
     @mouseup="handleMouseUp"
     @mouseleave="handleMouseUp"
     @touchstart="handleTouchStart"
-    @touchmove="handleTouchMove"
     @touchend="handleTouchEnd"
     @touchcancel="handleTouchEnd"
-    @wheel="handleWheel"
   >
     <div
       class="absolute inset-0"
@@ -370,6 +368,8 @@ function handleTouchEnd() {
 }
 
 function handleWheel(e: WheelEvent) {
+  e.preventDefault()
+
   const deltaX = e.deltaX
   const deltaY = e.deltaY
 
@@ -397,6 +397,16 @@ defineExpose({
 onMounted(() => {
   isComponentMounted.value = true
   updateGridItems()
+
+  // Add non-passive event listeners
+  if (containerRef.value) {
+    containerRef.value.addEventListener('wheel', handleWheel, {
+      passive: false,
+    })
+    containerRef.value.addEventListener('touchmove', handleTouchMove, {
+      passive: false,
+    })
+  }
 })
 
 onUnmounted(() => {
@@ -405,6 +415,12 @@ onUnmounted(() => {
     cancelAnimationFrame(animationFrame.value)
   }
   debouncedUpdateGridItems.cancel()
+
+  // Remove event listeners
+  if (containerRef.value) {
+    containerRef.value.removeEventListener('wheel', handleWheel)
+    containerRef.value.removeEventListener('touchmove', handleTouchMove)
+  }
 })
 </script>
 
