@@ -47,8 +47,6 @@ export const componentNames = computed(() =>
 </script>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-
 interface PlaygroundProps {
   currentExample: number
 }

@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import ThiingsGrid, { type ItemConfig } from '../../lib/ThiingsGrid.vue'
+import ThiingsGrid from '../../lib/ThiingsGrid.vue'
 </script>
 
 <script lang="ts">

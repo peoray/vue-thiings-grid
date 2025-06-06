@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import ThiingsGrid, { type ItemConfig } from '../../lib/ThiingsGrid.vue'
+import ThiingsGrid from '../../lib/ThiingsGrid.vue'
 
 const gridRef = ref<InstanceType<typeof ThiingsGrid> | null>(null)
 

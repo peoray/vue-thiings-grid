@@ -4,7 +4,9 @@
       <div class="absolute inset-1 flex items-center justify-center">
         <img
           :draggable="false"
-          :src="`/thiings/${images[gridIndex % images.length]}.png`"
+          :src="`/vue-thiings-grid/thiings/${
+            images[gridIndex % images.length]
+          }.png`"
         />
       </div>
     </template>

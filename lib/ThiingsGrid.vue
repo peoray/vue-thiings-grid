@@ -47,7 +47,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted, DefineProps } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 
 // Grid physics constants
 const MIN_VELOCITY = 0.2
@@ -67,11 +67,11 @@ interface GridItem {
   gridIndex: number
 }
 
-interface ItemConfig {
-  isMoving: boolean
-  position: Position
-  gridIndex: number
-}
+// interface ItemConfig {
+//   isMoving: boolean
+//   position: Position
+//   gridIndex: number
+// }
 
 const props = withDefaults(
   defineProps<{
@@ -85,9 +85,9 @@ const props = withDefaults(
 )
 
 // Define reactive state
-const offset = ref<Position>({ ...props.initialPosition } || { x: 0, y: 0 })
-const restPos = ref<Position>({ ...props.initialPosition } || { x: 0, y: 0 })
-const startPos = ref<Position>({ ...props.initialPosition } || { x: 0, y: 0 })
+const offset = ref<Position>({ ...props.initialPosition })
+const restPos = ref<Position>({ ...props.initialPosition })
+const startPos = ref<Position>({ ...props.initialPosition })
 const velocity = ref<Position>({ x: 0, y: 0 })
 const isDragging = ref<boolean>(false)
 const gridItems = ref<GridItem[]>([])
