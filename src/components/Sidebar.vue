@@ -32,13 +32,21 @@
       </nav>
     </div>
     <div class="space-y-3">
-      <!-- <a
-        href="https://thiings.co"
+      <a
+        href="https://nuxtsaaskit.com/?ref=vue-thiings-grid"
         target="_blank"
         rel="noopener noreferrer"
         class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg text-center text-sm transition-colors duration-200 no-underline"
       >
-        explore thiings.co
+        Launch your SaaS with Nuxt SaaS Kit
+      </a>
+      <!-- <a
+        href="https://nuxtsaaskit.com/?ref=vue-thiings-grid"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block w-full bg-[#11B481] hover:bg-[#11B481]/80 text-white font-bold py-3 px-4 rounded-lg text-center text-sm transition-colors duration-200 no-underline"
+      >
+        Launch your SaaS with Nuxt SaaS Kit
       </a> -->
       <a
         href="https://github.com/peoray/vue-thiings-grid"
@@ -47,14 +55,6 @@
         class="block w-full bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-lg text-center text-sm transition-colors duration-200 no-underline"
       >
         view docs
-      </a>
-      <a
-        href="https://nuxtsaaskit.com/?ref=vue-thiings-grid"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="block w-full bg-[#11B481] hover:bg-[#11B481]/80 text-white font-bold py-3 px-4 rounded-lg text-center text-sm transition-colors duration-200 no-underline"
-      >
-        Launch your SaaS with Nuxt SaaS Kit
       </a>
     </div>
   </aside>
