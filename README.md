@@ -1,10 +1,16 @@
+# 🚀 [**Save countless hours of dev time with Nuxt SaaS Kit →**](https://nuxtsaaskit.com/?ref=gh-vue-thiings-grid)
+
+> The scalable and production-ready Nuxt SaaS starter kit. Nuxt SaaS Kit provides all the important building blocks, so you can focus on launching your startup and delivering value to your users.
+
+<br />
+
 # VueThiingsGrid
 
 A high-performance, infinite scrolling grid component for Vue that provides smooth touch/mouse interactions with momentum-based scrolling. Perfect for displaying large datasets in a grid format with custom cell renderers.
 
-## 🪩 [**Explore Thiings.co →**](https://thiings.co)
+<!-- ## 🪩 [**Explore Thiings.co →**](https://thiings.co)
 
-> This is the component that powers the interactive grid on [thiings.co](https://thiings.co/) - A growing collection of 1200+ free 3D icons, generated with AI.
+> This is the component that powers the interactive grid on [thiings.co](https://thiings.co/) - A growing collection of 1200+ free 3D icons, generated with AI. -->
 
 ## 🎮 [**Try the Live Playground →**](https://peoray.github.io/vue-thiings-grid)
 
