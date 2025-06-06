@@ -25,30 +25,25 @@ A high-performance, infinite scrolling grid component for Vue that provides smoo
 
 This component is currently part of this repository. To use it in your project:
 
-1. Copy the `lib/ThiingsGrid.tsx` file to your project
-2. Install the required dependencies:
-
-```bash
-npm install react react-dom
-```
+- Copy the `lib/ThiingsGrid.vue` file to your project
 
 #### Basic Usage
 
 ```vue
 <template>
-	<div :style="{ width: '100vw', height: '100vh' }">
-		<ThiingsGrid :grid-size="80">
-			<template #default="{ gridIndex, position }">
-				<div class="absolute inset-1 flex items-center justify-center">
-					{{ gridIndex }}
-				</div>
-			</template>
-		</ThiingsGrid>
-	</div>
+  <div :style="{ width: '100vw', height: '100vh' }">
+    <ThiingsGrid :grid-size="80">
+      <template #default="{ gridIndex, position }">
+        <div class="absolute inset-1 flex items-center justify-center">
+          {{ gridIndex }}
+        </div>
+      </template>
+    </ThiingsGrid>
+  </div>
 </template>
 
 <script setup lang="ts">
-import ThiingsGrid from './path/to/ThiingsGrid.vue';
+import ThiingsGrid from './path/to/ThiingsGrid.vue'
 </script>
 ```
 
@@ -76,8 +71,8 @@ The component provides the following slot props for custom item rendering:
 
 ```typescript
 interface Position {
-	x: number;
-	y: number;
+  x: number
+  y: number
 }
 ```
 
@@ -87,19 +82,19 @@ interface Position {
 
 ```vue
 <template>
-	<ThiingsGrid :gridSize="80" class="bg-gray-100">
-		<template #default="{ gridIndex }">
-			<div
-				class="absolute inset-1 flex items-center justify-center bg-blue-50 border border-blue-500 rounded text-sm font-bold text-blue-800"
-			>
-				{{ gridIndex }}
-			</div>
-		</template>
-	</ThiingsGrid>
+  <ThiingsGrid :gridSize="80" class="bg-gray-100">
+    <template #default="{ gridIndex }">
+      <div
+        class="absolute inset-1 flex items-center justify-center bg-blue-50 border border-blue-500 rounded text-sm font-bold text-blue-800"
+      >
+        {{ gridIndex }}
+      </div>
+    </template>
+  </ThiingsGrid>
 </template>
 
 <script setup lang="ts">
-import ThiingsGrid, { type ItemConfig } from '../../lib/ThiingsGrid.vue';
+import ThiingsGrid, { type ItemConfig } from '../../lib/ThiingsGrid.vue'
 </script>
 ```
 
@@ -107,34 +102,34 @@ import ThiingsGrid, { type ItemConfig } from '../../lib/ThiingsGrid.vue';
 
 ```vue
 <template>
-	<ThiingsGrid :grid-size="100">
-		<template #default="{ gridIndex }">
-			<div
-				:class="`absolute inset-0 flex items-center justify-center ${getColorClass(
-					gridIndex
-				)} text-xs font-bold text-gray-800 shadow-sm`"
-			>
-				{{ gridIndex }}
-			</div>
-		</template>
-	</ThiingsGrid>
+  <ThiingsGrid :grid-size="100">
+    <template #default="{ gridIndex }">
+      <div
+        :class="`absolute inset-0 flex items-center justify-center ${getColorClass(
+          gridIndex
+        )} text-xs font-bold text-gray-800 shadow-sm`"
+      >
+        {{ gridIndex }}
+      </div>
+    </template>
+  </ThiingsGrid>
 </template>
 
 <script setup lang="ts">
-import ThiingsGrid, { type ItemConfig } from '../../lib/ThiingsGrid.vue';
+import ThiingsGrid, { type ItemConfig } from '../../lib/ThiingsGrid.vue'
 
 const colors = [
-	'bg-red-300',
-	'bg-green-300',
-	'bg-blue-300',
-	'bg-yellow-300',
-	'bg-pink-300',
-	'bg-cyan-300',
-];
+  'bg-red-300',
+  'bg-green-300',
+  'bg-blue-300',
+  'bg-yellow-300',
+  'bg-pink-300',
+  'bg-cyan-300',
+]
 
 const getColorClass = (gridIndex: number): string => {
-	return colors[gridIndex % colors.length];
-};
+  return colors[gridIndex % colors.length]
+}
 </script>
 ```
 
@@ -142,38 +137,38 @@ const getColorClass = (gridIndex: number): string => {
 
 ```vue
 <template>
-	<ThiingsGrid :grid-size="150">
-		<template #default="{ gridIndex, position, isMoving }">
-			<div
-				:class="[
-					'absolute',
-					'inset-1',
-					'flex',
-					'flex-col',
-					'items-center',
-					'justify-center',
-					'bg-white',
-					'border',
-					'border-gray-200',
-					'rounded-xl',
-					'p-2',
-					'text-xs',
-					'text-gray-800',
-					'transition-shadow',
-					isMoving ? 'shadow-xl' : 'shadow-md',
-				]"
-			>
-				<div class="text-base font-bold mb-1">#{{ gridIndex }}</div>
-				<div class="text-[10px] text-gray-500">
-					{{ position.x }}, {{ position.y }}
-				</div>
-			</div>
-		</template>
-	</ThiingsGrid>
+  <ThiingsGrid :grid-size="150">
+    <template #default="{ gridIndex, position, isMoving }">
+      <div
+        :class="[
+          'absolute',
+          'inset-1',
+          'flex',
+          'flex-col',
+          'items-center',
+          'justify-center',
+          'bg-white',
+          'border',
+          'border-gray-200',
+          'rounded-xl',
+          'p-2',
+          'text-xs',
+          'text-gray-800',
+          'transition-shadow',
+          isMoving ? 'shadow-xl' : 'shadow-md',
+        ]"
+      >
+        <div class="text-base font-bold mb-1">#{{ gridIndex }}</div>
+        <div class="text-[10px] text-gray-500">
+          {{ position.x }}, {{ position.y }}
+        </div>
+      </div>
+    </template>
+  </ThiingsGrid>
 </template>
 
 <script setup lang="ts">
-import ThiingsGrid, { type ItemConfig } from '../../lib/ThiingsGrid.vue';
+import ThiingsGrid, { type ItemConfig } from '../../lib/ThiingsGrid.vue'
 </script>
 ```
 
@@ -186,16 +181,16 @@ Always use absolute positioning within your cell components for optimal performa
 ```vue
 // ✅ Good
 <template #default="{ gridIndex }">
-	<div class="absolute inset-1 ...">
-		{{ gridIndex }}
-	</div>
+  <div class="absolute inset-1 ...">
+    {{ gridIndex }}
+  </div>
 </template>
 
 // ❌ Avoid - can cause layout issues
 <template #default="{ gridIndex }">
-	<div class="w-full h-full ...">
-		{{ gridIndex }}
-	</div>
+  <div class="w-full h-full ...">
+    {{ gridIndex }}
+  </div>
 </template>
 ```
 
@@ -203,7 +198,7 @@ Always use absolute positioning within your cell components for optimal performa
 
 Ensure the ThiingsGrid has a defined container size:
 
-```tsx
+```vue
 // ✅ Good - explicit container size
 <div style={ width: '100vw', height: '100vh' }>
   ...
@@ -225,7 +220,7 @@ The `gridIndex` is calculated based on the grid position using a custom algorith
 
 You can access the current grid position programmatically:
 
-```tsx
+```vue
 <template>
   <div>
     <ThiingsGrid
